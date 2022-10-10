@@ -5,7 +5,6 @@
  * @created 10/10/2022
  */
 
-
 import { LightningElement } from 'lwc';
 import getCurrentlyLoggedInUsersCountryCode from '@salesforce/apex/CTRL_NetToGross.getCurrentlyLoggedInUsersCountryCode';
 import x_api_key from '@salesforce/label/c.x_api_key'
