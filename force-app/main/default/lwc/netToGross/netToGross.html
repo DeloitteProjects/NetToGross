@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+    <template if:false = {grossValueFound}>
+    <div>
+    <label for="netvalue">Input Net Value: </label>
+    <input type="number" id="netvalue" class="netvalue">
+    </div>
+    <button class="submit">Submit</button>
+    </template>
+    <template if:true = {grossValueFound}>
+        <h1>The gross value: </h1>
+        <p>{grossValue}</p>
+    </template>
+    </lightning-card>
+</template>

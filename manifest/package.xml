@@ -32,5 +32,17 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    <types>
+       <members>standard__LightningSales</members>
+       <name>CustomApplication</name>
+    </types>
+    <types>
+       <members>*</members>
+       <name>CustomLabel</name>
+    </types>
+    <types>
+       <members>*</members>
+       <name>CustomTab</name>
+    </types>
     <version>55.0</version>
 </Package>
