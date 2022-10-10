@@ -44,5 +44,9 @@
        <members>*</members>
        <name>CustomTab</name>
     </types>
+    <types>
+       <members>*</members>
+       <name>CspTrustedSite</name>
+    </types>
     <version>55.0</version>
 </Package>
