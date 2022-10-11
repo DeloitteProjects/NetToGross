@@ -45,9 +45,8 @@ export default class NetToGross extends LightningElement {
         for (let param of params) {
             url = url.concat(param.parameterName + "=" + param.parameterValue + "&");
         }
-
-        url = url.slice(0, url.length - 1);
         
+        url = url.slice(0, url.length - 1);
         try {
             const response = await fetch(url, {
                 headers: {
@@ -55,7 +54,6 @@ export default class NetToGross extends LightningElement {
                 }
             });
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
             this.grossValue = (netValue / (1 - (jsonResponse.rates[0].standard_rate / 100))).toFixed(2) + ` ${jsonResponse.rates[0].currency}`;
             this.grossValueFound = true;
         } catch (err) {
