@@ -1,15 +1,25 @@
 <template>
-    <lightning-card>
-    <template if:false = {grossValueFound}>
-    <div>
-    <label for="netvalue">Input Net Value: </label>
-    <input type="number" id="netvalue" class="netvalue">
-    </div>
-    <button class="submit">Submit</button>
+  <lightning-card>
+    <template if:false={grossValueFound}>
+      <label for="netvalue" class="slds-m-left_x-small bold xx_large"
+        >Input Net Value:
+      </label>
+      <lightning-input
+        type="number"
+        class="netvalue slds-m-horizontal_x-small slds-m-vertical_x-small"
+        placeholder="Net Value"
+        id="netvalue"
+      ></lightning-input>
+      <lightning-button
+        label="Calculate"
+        title="Non-primary action"
+        onclick={netToGross}
+        class="slds-m-left_x-small"
+      ></lightning-button>
     </template>
-    <template if:true = {grossValueFound}>
-        <h1>The gross value: </h1>
-        <p>{grossValue}</p>
+    <template if:true={grossValueFound}>
+      <h1 class="slds-m-around_x-small">The gross value:</h1>
+      <p class="slds-m-left_x-small bold">{grossValue}</p>
     </template>
-    </lightning-card>
+  </lightning-card>
 </template>
